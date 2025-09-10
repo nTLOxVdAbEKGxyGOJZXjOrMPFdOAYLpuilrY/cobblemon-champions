@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobblemon Champions - Competitive Cobblemon Server</title>
+    <meta name="description" content="Join Cobblemon Champions - where only ONE player can become Champion. Battle gyms, compete in tournaments, and prove you're the best in competitive Cobblemon.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <span class="logo">👑 Cobblemon Champions</span>
+                </div>
+                <nav class="nav" id="nav">
+                    <a href="#hero" class="nav__link">Home</a>
+                    <a href="#features" class="nav__link">Features</a>
+                    <a href="#gyms" class="nav__link">Gyms</a>
+                    <a href="#tournaments" class="nav__link">Tournaments</a>
+                    <a href="#rules" class="nav__link">Rules</a>
+                    <a href="#support" class="nav__link">Support</a>
+                </nav>
+                <div class="header__actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Cobblemon Champions</h1>
+                    <p class="hero__subtitle">Become the <span class="highlight">ONE Champion</span></p>
+                    <p class="hero__description">Defeat gyms, join weekly tournaments, and compete in exclusive events for a chance to become the Champion. Challenge rivals and prove you're the best in this competitive Cobblemon server.</p>
+                    
+                    <div class="server-info">
+                        <div class="server-info__item">
+                            <span class="server-info__label">Server IP:</span>
+                            <span class="server-info__value" id="serverIp">cobblemonchampions.mc.gg</span>
+                            <button class="btn btn--sm copy-btn" id="copyIpBtn">Copy IP</button>
+                        </div>
+                        <div class="server-info__item">
+                            <span class="server-info__label">Version:</span>
+                            <span class="server-info__value">1.20.1</span>
+                        </div>
+                    </div>
+
+                    <div class="hero__actions">
+                        <a href="https://discord.gg/cobblemonchampions" target="_blank" class="btn btn--primary">Join Discord</a>
+                        <a href="https://modrinth.com/modpack/cobblemon-champions" target="_blank" class="btn btn--secondary">Download Modpack</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Server Status -->
+        <section class="server-status">
+            <div class="container">
+                <div class="status-grid">
+                    <div class="status-item">
+                        <div class="status-indicator" id="statusIndicator">🟢</div>
+                        <div class="status-text">
+                            <span class="status-label">Status</span>
+                            <span class="status-value" id="serverStatus">Online</span>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-text">
+                            <span class="status-label">Players</span>
+                            <span class="status-value" id="playerCount">47/100</span>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-text">
+                            <span class="status-label">TPS</span>
+                            <span class="status-value" id="tpsValue">19.8</span>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-text">
+                            <span class="status-label">Version</span>
+                            <span class="status-value">1.20.1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose Champions?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">👑</div>
+                        <h3 class="feature-title">Single Champion System</h3>
+                        <p class="feature-description">Only ONE player can hold the Champion title. Defeat gyms, climb the ladder, and challenge the reigning Champion to claim your place at the top.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏟️</div>
+                        <h3 class="feature-title">8 Gym Leaders</h3>
+                        <p class="feature-description">Battle against player-run gyms, each specializing in different types. Earn badges and prove your worth in competitive battles.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3 class="feature-title">Weekly Tournaments</h3>
+                        <p class="feature-description">Join our Saturday tournaments featuring Singles and Doubles formats with proper competitive clauses and cash prizes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="feature-title">Fair Competition</h3>
+                        <p class="feature-description">No pay-to-win mechanics. Success depends purely on skill, strategy, and dedication. Everyone competes on equal footing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Start Guide -->
+        <section id="quickstart" class="quickstart">
+            <div class="container">
+                <h2 class="section-title">Quick Start Guide</h2>
+                <div class="quickstart-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Install Fabric</h3>
+                            <p class="step-description">Download and install Fabric Loader 1.20.1 from fabricmc.net</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Get Cobblemon</h3>
+                            <p class="step-description">Download the Cobblemon mod from Modrinth or CurseForge</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Install Modpack</h3>
+                            <p class="step-description">Download our custom modpack from Modrinth for the complete experience</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Join Server</h3>
+                            <p class="step-description">Connect using IP: cobblemonchampions.mc.gg and start your journey!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gyms Section -->
+        <section id="gyms" class="gyms">
+            <div class="container">
+                <h2 class="section-title">Gym Leaders</h2>
+                <p class="section-subtitle">Challenge 8 specialized gym leaders on your path to becoming Champion</p>
+                <div class="gyms-grid">
+                    <div class="gym-card">
+                        <div class="gym-type fire">Fire</div>
+                        <h3 class="gym-leader">BlazeMaster</h3>
+                        <div class="gym-badge">Flame Badge</div>
+                        <p class="gym-description">Ignite your passion for victory</p>
+                    </div>
+                    <div class="gym-card">
+                        <div class="gym-type water">Water</div>
+                        <h3 class="gym-leader">TidalWave</h3>
+                        <div class="gym-badge">Current Badge</div>
+                        <p class="gym-description">Flow like water, strike like a tsunami</p>
+                    </div>
+                    <div class="gym-card">
+                        <div class="gym-type grass">Grass</div>
+                        <h3 class="gym-leader">ForestGuard</h3>
+                        <div class="gym-badge">Leaf Badge</div>
+                        <p class="gym-description">Nature's strength runs deep</p>
+                    </div>
+                    <div class="gym-card">
+                        <div class="gym-type electric">Electric</div>
+                        <h3 class="gym-leader">StormBreaker</h3>
+                        <div class="gym-badge">Bolt Badge</div>
+                        <p class="gym-description">Lightning-fast reflexes required</p>
+                    </div>
+                    <div class="gym-card">
+                        <div class="gym-type psychic">Psychic</div>
+                        <h3 class="gym-leader">MindBender</h3>
+                        <div class="gym-badge">Mind Badge</div>
+                        <p class="gym-description">Think three moves ahead</p>
+                    </div>
+                    <div class="gym-card">
+                        <div class="gym-type fighting">Fighting</div>
+                        <h3 class="gym-leader">IronFist</h3>
+                        <div class="gym-badge">Muscle Badge</div>
+                        <p class="gym-description">Raw power meets tactical prowess</p>
+                    </div>
+                    <div class="gym-card">
+                        <div class="gym-type steel">Steel</div>
+                        <h3 class="gym-leader">MetalCore</h3>
+                        <div class="gym-badge">Iron Badge</div>
+                        <p class="gym-description">Unbreakable defense, unstoppable offense</p>
+                    </div>
+                    <div class="gym-card">
+                        <div class="gym-type dragon">Dragon</div>
+                        <h3 class="gym-leader">DragonLord</h3>
+                        <div class="gym-badge">Master Badge</div>
+                        <p class="gym-description">Face the ultimate challenge</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tournaments Section -->
+        <section id="tournaments" class="tournaments">
+            <div class="container">
+                <h2 class="section-title">Weekly Tournaments</h2>
+                <p class="section-subtitle">Compete every Saturday in our competitive tournament brackets</p>
+                <div class="tournament-info">
+                    <div class="tournament-card">
+                        <h3>Saturday Singles</h3>
+                        <div class="tournament-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Format:</span>
+                                <span class="detail-value">6v6 Singles</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Time:</span>
+                                <span class="detail-value">3:00 PM EST</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Registration:</span>
+                                <span class="detail-value">Open until 2:45 PM</span>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary">Sign Up</button>
+                    </div>
+                    <div class="tournament-card">
+                        <h3>Saturday Doubles</h3>
+                        <div class="tournament-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Format:</span>
+                                <span class="detail-value">4v4 Doubles</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Time:</span>
+                                <span class="detail-value">6:00 PM EST</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Registration:</span>
+                                <span class="detail-value">Open until 5:45 PM</span>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules Section -->
+        <section id="rules" class="rules">
+            <div class="container">
+                <h2 class="section-title">Competitive Rules</h2>
+                <div class="rules-grid">
+                    <div class="rules-category">
+                        <h3>Battle Clauses</h3>
+                        <ul class="rules-list">
+                            <li>Species Clause: One Pokemon per species on your team</li>
+                            <li>Sleep Clause: Only one opponent Pokemon can be asleep at a time</li>
+                            <li>OHKO Clause: One-hit KO moves are banned</li>
+                            <li>Evasion Clause: Double Team and Minimize are banned</li>
+                        </ul>
+                    </div>
+                    <div class="rules-category">
+                        <h3>Tournament Rules</h3>
+                        <ul class="rules-list">
+                            <li>Item Clause: No duplicate items in tournaments</li>
+                            <li>All Pokemon must be level 100 for gym battles</li>
+                            <li>6v6 singles format for gym challenges</li>
+                            <li>Best-of-3 matches for tournament elimination rounds</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section id="support" class="support">
+            <div class="container">
+                <h2 class="section-title">Support the Server</h2>
+                <p class="section-subtitle">Help us maintain the best competitive Cobblemon experience</p>
+                <div class="support-content">
+                    <div class="support-card">
+                        <h3>Server Store</h3>
+                        <p>Support us through our external store. All purchases are cosmetic only - we maintain fair competition for everyone.</p>
+                        <a href="#" target="_blank" class="btn btn--primary">Visit Store</a>
+                    </div>
+                    <div class="support-card">
+                        <h3>Community</h3>
+                        <p>Join our Discord community for support, updates, tournament announcements, and to connect with other trainers.</p>
+                        <a href="https://discord.gg/cobblemonchampions" target="_blank" class="btn btn--secondary">Join Discord</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>Cobblemon Champions</h4>
+                    <p>The ultimate competitive Cobblemon server where only one can rule as Champion.</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#gyms">Gyms</a></li>
+                        <li><a href="#tournaments">Tournaments</a></li>
+                        <li><a href="#rules">Rules</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Connect</h4>
+                    <ul class="footer__links">
+                        <li><a href="https://discord.gg/cobblemonchampions" target="_blank">Discord</a></li>
+                        <li><a href="https://modrinth.com/modpack/cobblemon-champions" target="_blank">Modpack</a></li>
+                        <li><a href="#" target="_blank">Store</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Cobblemon Champions. Not affiliated with Mojang or Nintendo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copy Success Toast -->
+    <div class="toast" id="copyToast">
+        <span>Server IP copied to clipboard!</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
